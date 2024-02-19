@@ -5,7 +5,7 @@ import TeamItem from "./TeamItem"
 const TeamContainer = ({ name }) => {
   const { Teams } = useTeam()
   return (
-    <div className={`w-full h-full ${name} flex-col  gap-2`}>
+    <div className={`w-full h-full ${name} flex-col pt-4 gap-2`}>
       <div className='w-full flex flex-col  gap-2'>
         <div className='text-center text-black-500 font-bold text-[16px]'>
           <p>Team</p>

@@ -1,11 +1,12 @@
 import { TaskItem, TaskFrom } from '../index'
 import { useTask } from '../../../context';
+import { Link } from 'react-router-dom';
 
-const TaskContainer = ({name}) => {
+const TaskContainer = ({ name }) => {
   const { tasks } = useTask()
   return (
-    <div className={`w-full h-full ${name} flex-col  gap-2`}>
-      <div className='w-full flex flex-col  gap-2'>
+    <div className={`w-full h-full ${name} flex-col  gap-2 `}>
+      <div className='w-full flex flex-col gap-2 pt-4'>
         <div className='text-center text-black-500 font-bold text-[16px]'>
           <p>Task</p>
         </div>

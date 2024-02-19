@@ -1,10 +1,18 @@
 import { useState } from 'react'
 import { TaskContainer, TeamContainer, View, ManageTeam } from './index'
+import { Link } from 'react-router-dom'
 const Features = () => {
   const [page, setPage] = useState(1)
   return (
     <div className='min-w-full min-h-screen flex flex-row flex-wrap justify-center items-center gap-x-2 bg-image'>
-      <div className='w-[350px] md:w-[400px] min-h-[400px] bg-[#fff] rounded-md border shadow-lg flex flex-col items-start  px-4 py-2  gap-2 justify-between'>
+      <div className='w-[350px] md:w-[400px] min-h-[400px] bg-[#fff] rounded-md border shadow-lg flex flex-col items-start  px-4 py-2  gap-2 justify-between relative'>
+        <div className='absolute top-3 right-3'>
+          <Link to="/">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-x" viewBox="0 0 16 16">
+              <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+            </svg>
+          </Link>
+        </div>
         <TaskContainer name={page === 1 ? "flex" : 'hidden'} />
         <TeamContainer name={page === 2 ? "flex" : 'hidden'} />
         <View name={page === 3 ? "flex" : 'hidden'} />
@@ -43,7 +51,6 @@ const Features = () => {
             <div className={`${page === 4 ? 'bg-[#b6b3b3] w-3' : 'bg-[#d9d9d9] w-2'} h-2 rounded-full`}></div>
           </div>
         </div>
-
       </div>
     </div >
   )

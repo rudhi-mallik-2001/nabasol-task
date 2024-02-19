@@ -10,7 +10,7 @@ const View = ({ name }) => {
         localStorage.setItem("view", JSON.stringify(view))
     }
     return (
-        <div className={`w-full h-full ${name} flex-col  gap-4`}>
+        <div className={`w-full h-full ${name} flex-col pt-4 gap-4`}>
             <div className='text-center text-black-500 font-bold text-[16px]'>
                 <p>Select View</p>
             </div>
