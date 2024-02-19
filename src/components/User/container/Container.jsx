@@ -29,7 +29,7 @@ const Container = () => {
         <div className='w-full p-2 bg-[#fff] flex flex-col gap-2 pb-[3rem] rounded-b-[20px] relative'>
           
           {
-            <span className="absolute top-0  text-[red]">
+            <span className="absolute top-0 text-[red]">
               {error.error === true ? error.message : ''}
             </span>
           }
