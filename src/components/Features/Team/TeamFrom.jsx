@@ -42,7 +42,7 @@ const TeamFrom = () => {
   return (
     <div className='w-full flex flex-col relative'>
       <form onSubmit={add} className='w-full flex flex-row flex-wrap gap-2  bg-transparent'>
-        <div className="w-[83%] flex flex-wrap gap-2 justify-start items-center border-2 rounded-md border-indigo-500 px-1">
+        <div className="w-[80%] md:w-[83%] flex flex-wrap gap-2 justify-start items-center border-2 rounded-md border-indigo-500 px-1">
           {
             selectedMember.map((member, idx) => {
               return (
