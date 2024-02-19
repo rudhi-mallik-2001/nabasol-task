@@ -45,10 +45,10 @@ const Features = () => {
               : ''}
           </div>
           <div className='w-full flex flex-row justify-center items-center gap-x-2'>
-            <div className={`${page === 1 ? 'bg-[#b6b3b3] w-3' : 'bg-[#d9d9d9] w-2'} h-2 rounded-full`}></div>
-            <div className={`${page === 2 ? 'bg-[#b6b3b3] w-3' : 'bg-[#d9d9d9] w-2'} h-2 rounded-full`}></div>
-            <div className={`${page === 3 ? 'bg-[#b6b3b3] w-3' : 'bg-[#d9d9d9] w-2'} h-2 rounded-full`}></div>
-            <div className={`${page === 4 ? 'bg-[#b6b3b3] w-3' : 'bg-[#d9d9d9] w-2'} h-2 rounded-full`}></div>
+            <div onClick={()=>{setPage(1)}} className={`${page === 1 ? 'bg-[#b6b3b3] w-3' : 'bg-[#d9d9d9] w-2'} h-2 rounded-full cursor-pointer`}></div>
+            <div onClick={()=>{setPage(2)}} className={`${page === 2 ? 'bg-[#b6b3b3] w-3' : 'bg-[#d9d9d9] w-2'} h-2 rounded-full cursor-pointer`}></div>
+            <div onClick={()=>{setPage(3)}} className={`${page === 3 ? 'bg-[#b6b3b3] w-3' : 'bg-[#d9d9d9] w-2'} h-2 rounded-full cursor-pointer`}></div>
+            <div onClick={()=>{setPage(4)}} className={`${page === 4 ? 'bg-[#b6b3b3] w-3' : 'bg-[#d9d9d9] w-2'} h-2 rounded-full cursor-pointer`}></div>
           </div>
         </div>
       </div>
