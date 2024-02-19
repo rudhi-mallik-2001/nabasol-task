@@ -1,7 +1,8 @@
 import { GeneralInformation, Documents } from './index'
-const BusinessInformation = () => {
+const BusinessInformation = (props) => {
+    const {toggle}=props
     return (
-        <div className="w-full flex flex-col justify-center items-center gap-y-2">
+        <div className={`w-full ${toggle} flex-col justify-center items-center gap-y-2`}>
             <div className="w-full md:w-[67%] flex flex-col ">
                 <h1 className='text-[#58a9fa]'>GENERAL INFORMATION</h1>
             </div>

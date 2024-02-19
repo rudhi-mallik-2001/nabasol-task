@@ -6,7 +6,7 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
+  font-size: 18px !important;
   color-scheme: light dark;
   color: #526991;
   background-color: #ffffff;
@@ -17,6 +17,26 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 50px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #dedede;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #e2dbdb;
+}
+
 .bg-image {
   /* aspect-ratio: 1920/1080; */
   width: 100%;
@@ -24,4 +44,40 @@
   background-position: center;
   background-size: cover;
   background-image: url('./layered-waves.png');
+}
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-container:hover::before {
+  content: attr(data-tooltip);
+  display: block;
+  width: 300px;
+  position: absolute;
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 3px;
+  z-index: 2;
+  top: 0%;
+  left: 130%;
+  font-size: 12px;
+}
+
+.tooltip-container:hover::after {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 15px;
+  rotate: 40deg;
+  position: absolute;
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  z-index: 1;
+  top: 15%;
+  left: 110%;
+  font-size: 12px;
 }
