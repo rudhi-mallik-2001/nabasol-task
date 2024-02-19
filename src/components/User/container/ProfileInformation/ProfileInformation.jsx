@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { Input, Validatation, useDetails } from "../index";
+import { Input, ProgressDetails, Validatation, useDetails } from "../index";
 const ProfileInformation = (props) => {
     const {toggle}=props
+    const { currentPage } = useDetails()
     const { addDetails } = useDetails()
 
     const [error, setError] = useState({
@@ -20,12 +21,17 @@ const ProfileInformation = (props) => {
         } else
             setError({ error: validate.error, message: validate.message, type: type })
     }
-
+    
+    const data = {
+        title: 'Account Information',
+        messsage: 'Please, enter information about your company.'
+    }
     // console.log(error,details)
     return (
-        <div className={`w-full min-h-[300px] ${toggle} flex-row flex-wrap text-[#526991] justify-center items-start gap-2 pt-8 relative`}>
+        <div className={`w-full min-h-[300px] ${toggle} flex-row flex-wrap text-[#526991] justify-center items-start gap-3 pt-2 relative`}>
+            <ProgressDetails step={currentPage} data={data}/>
             {
-                <span className="absolute top-0  text-[red]">
+                <span className="absolute top-[10px]  text-[red]">
                     {error.error === true ? error.message : ''}
                 </span>
             }

@@ -24,7 +24,7 @@ const GeneralInformation = () => {
     return (
         <div className="w-full flex flex-row flex-wrap text-[#526991] justify-center items-center gap-2 relative">
             {
-                <span className="absolute top-[-20px] md:top-[-40px]  text-[red]">
+                <span className="absolute top-[-155px] text-[red]">
                     {error.error === true ? error.message : ''}
                 </span>
             }

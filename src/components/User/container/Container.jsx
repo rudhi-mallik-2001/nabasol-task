@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Progress, ProgressDetails, BusinessInformation, ProfileInformation, useDetails, checkDetails } from './index'
+import { Link } from 'react-router-dom'
 const Container = () => {
   const { currentPage, nextPage, prevPage, details } = useDetails()
   const [error, setError] = useState({ error: false, message: "" })
@@ -26,7 +27,7 @@ const Container = () => {
       <div className='w-full md:w-[80%] p-2 md:p-0 drop-shadow-lg flex flex-col rounded-[20px]'>
         <Progress />
         <div className='w-full p-2 bg-[#fff] flex flex-col gap-2 pb-[3rem] rounded-b-[20px] relative'>
-          <ProgressDetails step={currentPage} />
+          
           {
             <span className="absolute top-0  text-[red]">
               {error.error === true ? error.message : ''}
@@ -41,7 +42,7 @@ const Container = () => {
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" id="left-arrow" fill='#72b0fb'>
                 <path d="m12.3 17.71 6.486 6.486a1 1 0 0 0 1.414-1.414L14.418 17l5.782-5.782a1 1 0 0 0-1.414-1.414L12.3 16.29a.997.997 0 0 0-.292.71c0 .258.096.514.292.71z"></path></svg>
             </span>
-            <p className='font-bold text-[#72b0fb]'>Back to Login</p>
+            <Link to="/" className='font-bold text-[#72b0fb]'>Back to Login</Link>
           </div>
           <div className='w-[50%] flex flex-row justify-end items-center gap-2'>
             {currentPage > 1 && <button
