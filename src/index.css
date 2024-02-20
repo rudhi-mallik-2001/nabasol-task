@@ -81,3 +81,19 @@
   left: 110%;
   font-size: 12px;
 }
+@media only screen and (max-width: 768px) {
+  /* Adjust the top and bottom positions for tablets */
+  .tooltip-container:hover::before {
+    top: 300%;
+    bottom: auto;
+    left: 280%;
+    transform: translate(-50%, -50%);
+  }
+
+  .tooltip-container:hover::after {
+    top: 162%;
+    bottom: auto;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
