@@ -12,16 +12,16 @@ Currently, two official plugins are available:
 
 1. Clone the Repository:
 
-git clone https://github.com/rudhi-mallik-2001/nabasol-task
-
+      git clone https://github.com/rudhi-mallik-2001/nabasol-task
 
 2. Navigate to the Project Directory:
 
-   cd nabasol-task
+      cd nabasol-task
    
 3.Install Dependencies:
-    npm i
+
+      npm i
 
 4.Run the Development Server:
 
-    npm run dev
+      npm run dev
