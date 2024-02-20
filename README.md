@@ -9,7 +9,6 @@ Currently, two official plugins are available:
 
 
 #Getting Started
-
 1. Clone the Repository:
 
       git clone https://github.com/rudhi-mallik-2001/nabasol-task
@@ -20,7 +19,7 @@ Currently, two official plugins are available:
    
 3.Install Dependencies:
 
-      npm i
+      npm install
 
 4.Run the Development Server:
 
